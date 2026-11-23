@@ -16,6 +16,7 @@ The token never reaches stdout; it lives in ~/.virtual-college/ with owner-only 
 import argparse
 import json
 import os
+import re
 import sys
 import time
 import urllib.error
@@ -155,7 +156,11 @@ def logout(args) -> int:
 def request(args) -> int:
     base = server(args)
     saved = load(base)
-    path = args.path if args.path.startswith("/") else "/" + args.path
+    path = args.path
+    # Git Bash rewrites "/agent/guide" to "C:/Program Files/Git/agent/guide"; undo it.
+    if converted := re.match(r"^[A-Za-z]:/.*?/Git(/.*)$", path):
+        path = converted[1]
+    path = path if path.startswith("/") else "/" + path
     headers = {}
     method = args.method.upper()
     if args.dry_run:

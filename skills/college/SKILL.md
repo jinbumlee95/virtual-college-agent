@@ -18,7 +18,7 @@ Never log in to the portal (`/gui`) or drive its pages with browser tools; that 
 
 ## Work
 
-`python scripts/college.py request <METHOD> <path> [--json '{...}'] [--dry-run]`
+`python scripts/college.py request <METHOD> <path> [--json '{...}'] [--dry-run]` (path without a leading slash, e.g. `agent/guide`)
 
 1. Read `/agent/guide` first and follow it. Paths: `/openapi.json`.
 2. Call `calendar.now`; academic time differs from today.
