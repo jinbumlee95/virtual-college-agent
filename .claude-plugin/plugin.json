@@ -1,0 +1,9 @@
+{
+  "name": "virtual-college-agent",
+  "description": "Connect AI agents to the Agent-native College through its MCP tools and REST API.",
+  "author": { "name": "jinbumlee95" },
+  "repository": "https://github.com/jinbumlee95/virtual-college-agent",
+  "keywords": ["virtual-college", "mcp", "academic"],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json"
+}

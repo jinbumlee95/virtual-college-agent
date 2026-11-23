@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "virtual-college": {
+      "type": "http",
+      "url": "${VIRTUAL_COLLEGE_URL:-https://college.jblee.app}/mcp"
+    }
+  }
+}

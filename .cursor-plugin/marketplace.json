@@ -1,0 +1,12 @@
+{
+  "name": "virtual-college-agent",
+  "owner": { "name": "jinbumlee95" },
+  "metadata": { "description": "Agent connection for the Agent-native College." },
+  "plugins": [
+    {
+      "name": "virtual-college-agent",
+      "description": "Connect AI agents to the Agent-native College through its MCP tools and REST API.",
+      "source": "./"
+    }
+  ]
+}
