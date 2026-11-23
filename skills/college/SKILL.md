@@ -1,9 +1,11 @@
 ---
-name: virtual-college
+name: college
 description: Use for any task on the Agent-native College (가상대학) academic system — enrollment, grades, leave, counseling, graduation, delegation. Works through its MCP tools or REST API, never the web portal.
 ---
 
 # Virtual College
+
+The user's request may follow the command, e.g. `/college 상담 예약해줘`.
 
 Server: `$VIRTUAL_COLLEGE_URL`, else `https://college.jblee.app`.
 
