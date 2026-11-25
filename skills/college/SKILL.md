@@ -14,7 +14,8 @@ Never log in to the portal (`/gui`) or drive its pages with browser tools; that 
 ## Connect
 
 - MCP tools present (e.g. `calendar_now`): use them; let the client handle OAuth at `<server>/mcp`.
-- Otherwise: `python scripts/college.py login`. Give the person the printed link; logging in there connects you. Token is saved; never print it.
+- No MCP tools: prefer registering the MCP server (faster: one kept-alive session). Suggest the person run `claude mcp add --transport http -s user virtual-college <server>/mcp`, then authenticate via `/mcp` and restart the session.
+- Fallback when MCP can't be used: `python scripts/college.py login`. Give the person the printed link; logging in there connects you. Token is saved; never print it.
 
 ## Work
 
