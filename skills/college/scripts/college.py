@@ -43,6 +43,7 @@ def http(method, url, *, body=None, token=None, headers=None):
     data = None if body is None else json.dumps(body).encode()
     request = urllib.request.Request(url, data=data, method=method)
     request.add_header("Accept", "application/json, text/markdown;q=0.9, */*;q=0.8")
+    request.add_header("User-Agent", "college-agent/1.0 (+https://college.jblee.app)")
     if data is not None:
         request.add_header("Content-Type", "application/json")
     if token:
